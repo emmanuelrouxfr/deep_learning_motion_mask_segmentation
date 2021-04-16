@@ -1,8 +1,17 @@
 # deep_learning_motion_mask_segmention
 
-Repo to developp interactive tools for deep model trainings
-
 ![image from web](https://www.creatis.insa-lyon.fr/nextcloud/index.php/s/boGJjsP5tnFSWw2/preview)
+
+We will illustrate our method with one example (download the image (public from COVID CT-PRED) and model weights -from CREATIS website => to check)
+
+The merging will be done in a class that has several methods :
+
+      predict()
+      predict_axial()
+      predict_coronal()
+      predict_sagittal()
+      merge_predictions()
+      
 
 ## Run the example
 
