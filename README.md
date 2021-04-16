@@ -18,6 +18,8 @@ The merging will be done in a class that has several methods :
       merge_predictions()
 
 
+cite https://github.com/milesial/Pytorch-UNet for the UNet model code
+
 ## Run the example
 
 1- make sure you have python3 installed
