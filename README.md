@@ -3,7 +3,6 @@
 Repo to developp interactive tools for deep model trainings
 
 ![image from web](https://www.creatis.insa-lyon.fr/nextcloud/index.php/s/boGJjsP5tnFSWw2/preview)
-![image from local](reseau_global_v8.3_final.png)
 
 ## Run the example
 
@@ -26,10 +25,9 @@ Repo to developp interactive tools for deep model trainings
     pip3 install --upgrade pip
     python3 -m pip install -r requirements.txt
 
-6- Run the example illustrated above program
+6- Run the example illustrated above
 
+    **TO DO : add command line for running the example**
     python3 main.py
 
 ## Notes
-
-steps
