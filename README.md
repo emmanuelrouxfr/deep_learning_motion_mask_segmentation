@@ -2,7 +2,12 @@
 
 ![image from web](https://www.creatis.insa-lyon.fr/nextcloud/index.php/s/boGJjsP5tnFSWw2/preview)
 
+
+
 We will illustrate our method with one example (download the image (public from COVID CT-PRED) and model weights -from CREATIS website => to check)
+
+preprocessing => (check Thomas B.) say it can work with classic format (SimpleITK).
+dependencies => install gate tools
 
 The merging will be done in a class that has several methods :
 
@@ -11,7 +16,7 @@ The merging will be done in a class that has several methods :
       predict_coronal()
       predict_sagittal()
       merge_predictions()
-      
+
 
 ## Run the example
 
