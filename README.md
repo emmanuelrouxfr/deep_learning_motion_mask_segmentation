@@ -2,7 +2,8 @@
 
 ![image from web](https://www.creatis.insa-lyon.fr/nextcloud/index.php/s/boGJjsP5tnFSWw2/preview)
 
-This repository is used to demonstrate the method published in : http://link-to-paper.com
+This repository is used to demonstrate the method published in : http://link-to-paper.com  
+Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Davila Serrano, Jean-Christophe~Richard,Maciej Orkisz and David~Sarrut.
 
 
 ## This repository has two usages :
