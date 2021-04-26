@@ -34,7 +34,12 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 
     `pip3 install --upgrade pip`  
     `python3 -m pip install -r requirements.txt`  
-    
+ 
+* Install Gatetools for preprocessing  
+
+    `pip3 install gatetools???`  
+  
+   
 
 ## Case 1 : Use *our* trained model on *our* showcase data
 
@@ -44,7 +49,7 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 ## Case 2 : Use *our* trained model on *your* data
       
    Put all your .nii or .mgh or ... in the directory `data/`  
-   (optional) Run : `python3 pre_processing_data.py`  
+   (optional) Run : `gatetools ijiofezjiofjizoe`  
    Run : `python3 infer_motion_masks.py`  
    
    Motion mask as .nii files and figures will be located in : `results/`  
