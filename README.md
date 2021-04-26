@@ -55,7 +55,7 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
    Motion mask as .nii files and figures will be located in : `results/`  
    We suggest skipping the preprocessing step only if your data is sampled as isotropic 1mm^3  
 
-## Case 3 : Train and test our model on *your* data
+## (Advanced) Case 3 : Train and test our model on *your* data
 
 For this use-case, we recommend pluggin in your code the model located in model.py, we do not provide the data management part of the code, as it is really specific to each user.  
 
