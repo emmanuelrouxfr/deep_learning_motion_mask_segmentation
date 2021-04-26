@@ -6,7 +6,7 @@ This repository is used to demonstrate the method published in : http://link-to-
 Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Davila Serrano, Jean-Christophe Richard, Maciej Orkisz and David Sarrut.
 
 
-## This repository has two usages :
+## This repository has several usages :
 
  1- Use our trained model on the data we provide, as a proof of concept.  
  
@@ -20,7 +20,7 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 
 * Clone this repository on your machine and go in it:  
 
-    `cd deep_learning_motion_mask_segmention/`  
+    `cd deep_learning_motion_mask_segmentation/`  
 
 * Create a virtual environments  
 
