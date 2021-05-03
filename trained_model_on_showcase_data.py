@@ -63,7 +63,6 @@ if __name__ == '__main__':
     params.input_size = [256, 256, 256]
     params.n_channels = 1
     params.n_classes = 2
-    params.batch_size = 32
     params.pre_trained_weights_path = {
         "axial": "./data/model_weights/fold1_ep20_bs32_lr1e-3_axial.pt",
         "coronal" : "./data/model_weights/fold1_ep20_bs32_lr1e-3_coronal.pt",
