@@ -44,7 +44,7 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 ## Case 1 : Use *our* trained model on *our* showcase data
 
    Run :`python3 trained_model_on_showcase_data.py`  
-   Motion mask as .nii files and figures will be located in : `results_showcase/`  
+   Motion mask as .mhd and .raw files will be located in : `results_showcase/`  
 
 ## Case 2 : Use *our* trained model on *your* data (work in progress)
 
