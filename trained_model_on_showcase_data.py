@@ -3,47 +3,22 @@ import os
 import torch
 import SimpleITK as sitk
 import numpy as np
-
-from src.model.uuunet import UNet
-from src.utils.compute_prediction import compute_prediction
 from munch import Munch
 from tqdm import tqdm
 
-# GLOBAL VARIABLES
-cost_function = "Dice"
-optimizer = "adam"
-input_img_path = "./data/img_demo.mhd"
-n_channels = 1
-n_classes = 2
-batch_size = 32
-input_size = [256, 256, 256]
-pre_trained_weights_path = {
-    "axial": "/home/penarrubia/ShareCluster/penarrubia/segmentation/stage_master_nicolaspinon/results/2_test_fold1_ep20_bs32_lr1e-3_axial/checkpoint_best.pt",
-    "coronal" : "/home/penarrubia/ShareCluster/penarrubia/segmentation/stage_master_nicolaspinon/results/2_test_fold1_ep20_bs32_lr1e-3_coronal/checkpoint_best.pt",
-    "sagittal" : "/home/penarrubia/ShareCluster/penarrubia/segmentation/stage_master_nicolaspinon/results/2_test_fold1_ep20_bs32_lr1e-3_sagittal/checkpoint_best.pt"
-}
-lr = 1e-3
+from src.model.unet import UNet
+from src.utils.compute_prediction import compute_prediction
+from src.utils.showcase_downloads import run_showcase_downloads
 
 
-def main():
 
-    # Define parameters
-    params = Munch()
-    params.cost_function = cost_function
-    params.optimizer = optimizer
-    params.input_img_path = input_img_path
-    params.input_size = input_size
-    params.n_channels = n_channels
-    params.n_classes = n_classes
-    params.batch_size = batch_size
-    params.pre_trained_weights_path = pre_trained_weights_path
-    params.lr = lr
-    params.device = "cpu"
-    
-    # Extract the experiment tag and create the associated folder
-    params.exp_tag = "trained_model_on_showcase_data"
-    params.results_folder = os.path.join("./results", params.exp_tag)
+def main(params):
+
+    params.results_folder = os.path.join("./results_showcase", params.exp_tag)
     os.makedirs(params.results_folder, exist_ok=True)
+
+    # download showcase image and models
+    run_showcase_downloads()
 
     # Load data
     image = sitk.ReadImage(params.input_img_path)
@@ -59,18 +34,18 @@ def main():
     pred_sum = np.zeros((params.input_size))
 
     # Load UNet models and predict volumes in each direction
-    for slicing in tqdm(pre_trained_weights_path.keys(), total=3, desc="Direction prediction"):
+    for slicing in tqdm(params.pre_trained_weights_path.keys(), total=3, desc="Direction prediction"):
         model = UNet(params.n_channels, params.n_classes)
-        checkpoint = torch.load(pre_trained_weights_path[slicing], map_location=params.device)
+        checkpoint = torch.load(params.pre_trained_weights_path[slicing], map_location=params.device)
         model.load_state_dict(checkpoint["model_state_dict"])
         model.to(params.device)
         model.eval()
         pred_array = compute_prediction(model, slicing, image_tensor)
         pred_sum += pred_array
-    
+
     # Majority vote
     prediction = np.where(pred_sum >= 2, 1, 0).astype(np.int16)
-    
+
     # Saving of the prediction
     prediction_image = sitk.GetImageFromArray(prediction.astype(np.int16))
     prediction_image.SetDirection(direction)
@@ -80,5 +55,25 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
 
+    # Define parameters
+    params = Munch()
+    params.device = "cpu"
+    params.cost_function = "Dice"
+    params.optimizer = "adam"
+    params.lr = 1e-3
+    params.input_img_path = "./data/image_sample/50.0.mhd"
+    params.input_size = [256, 256, 256]
+    params.n_channels = 1
+    params.n_classes = 2
+    params.batch_size = 32
+    params.pre_trained_weights_path = {
+        "axial": "./data/model_weights/fold1_ep20_bs32_lr1e-3_axial.pt",
+        "coronal" : "./data/model_weights/fold1_ep20_bs32_lr1e-3_coronal.pt",
+        "sagittal" : "./data/model_weights/fold1_ep20_bs32_lr1e-3_sagittal.pt",
+    }
+
+    # Extract the experiment tag and create the associated folder
+    params.exp_tag = "trained_model_on_showcase_data"
+
+    main(params)

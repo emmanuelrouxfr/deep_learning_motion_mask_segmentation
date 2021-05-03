@@ -9,11 +9,11 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 ## This repository has several usages :
 
  1- Use our trained model on the data we provide, as a proof of concept.  
- 
+
  2- Test our trained model on your data, to get the motion mask segmentations on your data.  
- 
+
  3- Train our model on your data and test it on your data  
- 
+
 ## Pre-requisites and installations
 
 * Make sure you have python3 installed  
@@ -34,24 +34,24 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 
     `pip3 install --upgrade pip`  
     `python3 -m pip install -r requirements.txt`  
- 
-* Install Gatetools for preprocessing  
 
-    `pip3 install gatetools???`  
-  
-   
+* Install Gatetools for preprocessing (optional)
+
+    `pip3 install gatetools`  
+
+
 
 ## Case 1 : Use *our* trained model on *our* showcase data
 
    Run :`python3 trained_model_on_showcase_data.py`  
    Motion mask as .nii files and figures will be located in : `results_showcase/`  
-  
-## Case 2 : Use *our* trained model on *your* data
-      
+
+## Case 2 : Use *our* trained model on *your* data (work in progress)
+
    Put all your .nii or .mgh or ... in the directory `data/`  
-   (optional) Run : `gatetools ijiofezjiofjizoe`  
+   (optional) Run : `gatetools ...`  
    Run : `python3 infer_motion_masks.py`  
-   
+
    Motion mask as .nii files and figures will be located in : `results/`  
    We suggest skipping the preprocessing step only if your data is sampled as isotropic 1mm^3  
 
