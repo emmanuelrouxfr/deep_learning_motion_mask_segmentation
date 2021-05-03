@@ -1,4 +1,4 @@
-# deep_learning_motion_mask_segmention
+# deep_learning_motion_mask_segmentation
 
 ![image from web](https://www.creatis.insa-lyon.fr/nextcloud/index.php/s/boGJjsP5tnFSWw2/preview)
 
