@@ -59,9 +59,6 @@ if __name__ == '__main__':
     # Define parameters
     params = Munch()
     params.device = "cpu"
-    params.cost_function = "Dice"
-    params.optimizer = "adam"
-    params.lr = 1e-3
     params.input_img_path = "./data/image_sample/50.0.mhd"
     params.input_size = [256, 256, 256]
     params.n_channels = 1
