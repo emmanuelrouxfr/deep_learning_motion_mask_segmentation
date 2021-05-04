@@ -66,19 +66,4 @@ Thanks to the authors of this repository : https://github.com/milesial/Pytorch-U
 
 This work was performed within the framework of the LABEX PRIMES (ANR-11-LABX-0063) of Universit\'{e} de Lyon, within the program "Investissements d'Avenir"(ANR-11-IDEX-0007) operated by the French National Research Agency (ANR).  
 
-Thanks to (list of people that helped us but are not on the paper (e.g. Olivier Bernard) <= to discuss  
-
-## Notes
-
-We will illustrate our method with one example (download the image (public from COVID CT-PRED) and model weights -from CREATIS website => to check)
-
-preprocessing => (check Thomas B.) say it can work with classic format (SimpleITK).
-dependencies => install gate tools
-
-The merging will be done in a class that has several methods :
-
-      predict()
-      predict_axial()
-      predict_coronal()
-      predict_sagittal()
-      merge_predictions()
+Thanks to Olivier Bernard for getting us started with the project by providing examples of his codes, and many more in the CREATIS laboratory.  
