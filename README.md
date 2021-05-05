@@ -64,6 +64,6 @@ For this use-case, we recommend pluggin in your code the model located in model.
 
 Thanks to the authors of this repository : https://github.com/milesial/Pytorch-UNet for providing an efficient implementation of U-net.  
 
-This work was performed within the framework of the LABEX PRIMES (ANR-11-LABX-0063) of Universit\'{e} de Lyon, within the program "Investissements d'Avenir"(ANR-11-IDEX-0007) operated by the French National Research Agency (ANR).  
+This work was performed within the framework of the LABEX PRIMES (ANR-11-LABX-0063) of Université de Lyon, within the program "Investissements d'Avenir"(ANR-11-IDEX-0007) operated by the French National Research Agency (ANR).  
 
-Thanks to Olivier Bernard for getting us started with the project by providing examples of his codes, and many more in the CREATIS laboratory.  
+Thanks to Olivier Bernard for getting us started with the project by providing examples of his codes.
