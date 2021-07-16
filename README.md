@@ -53,7 +53,7 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
    Run : `python3 infer_motion_masks.py`  
 
    Motion mask as .nii files and figures will be located in : `results/`  
-   We suggest skipping the preprocessing step only if your data is sampled as isotropic 1mm^3  
+   We suggest skipping the preprocessing step only if your data is sampled as isotropic 2mm^3  
 
 ## (Advanced) Case 3 : Train and test our model on *your* data
 
