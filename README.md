@@ -49,7 +49,7 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 ## Case 2 : Use *our* trained model on *your* data (work in progress)
 
    Put all your .nii or .mgh or ... in the directory `data/`  
-   (optional) Run : `gatetools/bin/gt_affine_transform -i input_data.mhd -o output_data.mhd --newspacing "2.0" --force_resample --adaptative -p "-1000.0"`
+   (optional) Run : `gatetools/bin/gt_affine_transform -i input_data.mhd -o output_data.mhd --newspacing "2.0" --force_resample --adaptative -p "-1000.0"`  
    Run : `python3 infer_motion_masks.py`  
 
    Motion mask as .nii files and figures will be located in : `results/`  
