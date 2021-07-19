@@ -37,7 +37,7 @@ def check_dir_exist(dir_list):
             os.makedirs(dir_path)
             print(f'{dir_path} directory created')
 
-def run_showcase_downloads():
+def run_showcase_downloads(model_only=False):
 
     url_base_image = "https://www.creatis.insa-lyon.fr/~roux/deep_learning_motion_mask_segmention/image_sample/"
     dir_image_store = "data/image_sample/"
@@ -46,7 +46,9 @@ def run_showcase_downloads():
     dir_model_store = "data/model_weights/"
 
     check_dir_exist([dir_image_store, dir_model_store])
-    download_image(url_base_image, dir_image_store)
+    if not model_only:
+        print("skipping the demo image download")
+        download_image(url_base_image, dir_image_store)
     download_models(url_base_model, dir_model_store)
 
 

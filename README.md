@@ -48,11 +48,18 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 
 ## Case 2 : Use *our* trained model on *your* data (work in progress)
 
-   Put all your .nii or .mgh or ... in the directory `data/`  
+   Put all your .nii or .mgh or .mhd in the directory `data/`  
    (optional) Run : `gatetools/bin/gt_affine_transform -i input_data.mhd -o output_data.mhd --newspacing "2.0" --force_resample --adaptative -p "-1000.0"`  
+   Edit the file `infer_motion_masks.py` (l. 62-63) with the path to your data and its size:
+
+   ```python
+       params.input_img_path = "./data/PATH_OF_THE_IMAGE_TO_SEGMENT.mhd"
+       params.input_size = [256, 256, 256]
+   ```  
+
    Run : `python3 infer_motion_masks.py`  
 
-   Motion mask as .nii files and figures will be located in : `results/`  
+   Motion mask as .nii files and figures will be located in : `results/inference_on_your_data/`  
    We suggest skipping the preprocessing step only if your data is sampled as isotropic 2mm^3  
 
 ## (Advanced) Case 3 : Train and test our model on *your* data

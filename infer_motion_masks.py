@@ -14,11 +14,11 @@ from src.utils.showcase_downloads import run_showcase_downloads
 
 def main(params):
 
-    params.results_folder = os.path.join("./results/showcase", params.exp_tag)
+    params.results_folder = os.path.join("./results", params.exp_tag)
     os.makedirs(params.results_folder, exist_ok=True)
 
     # download showcase image and models
-    run_showcase_downloads()
+    run_showcase_downloads(model_only=True)
 
     # Load data
     image = sitk.ReadImage(params.input_img_path)
@@ -59,8 +59,8 @@ if __name__ == '__main__':
     # Define parameters
     params = Munch()
     params.device = "cpu"
-    params.input_img_path = "./data/image_sample/50.0.mhd"
-    params.input_size = [256, 256, 256]
+    params.input_img_path = "./data/PATH_OF_THE_IMAGE_TO_SEGMENT.mhd" # EDIT THIS LINE
+    params.input_size = [256, 256, 256] # EDIT THIS LINE
     params.n_channels = 1
     params.n_classes = 2
     params.pre_trained_weights_path = {
@@ -70,6 +70,6 @@ if __name__ == '__main__':
     }
 
     # Extract the experiment tag and create the associated folder
-    params.exp_tag = "trained_model_on_showcase_data"
+    params.exp_tag = "inference_on_your_data"
 
     main(params)
