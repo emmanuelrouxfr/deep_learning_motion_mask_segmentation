@@ -46,10 +46,12 @@ def run_showcase_downloads(model_only=False):
     dir_model_store = "data/model_weights/"
 
     check_dir_exist([dir_image_store, dir_model_store])
-    if not model_only:
-        print("skipping the demo image download")
+    if model_only:
+        print("skipping download of the demo images")
+        download_models(url_base_model, dir_model_store)
+    else:
         download_image(url_base_image, dir_image_store)
-    download_models(url_base_model, dir_model_store)
+        download_models(url_base_model, dir_model_store)
 
 
 
