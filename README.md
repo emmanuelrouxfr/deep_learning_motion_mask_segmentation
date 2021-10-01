@@ -46,7 +46,7 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
    Run :`python3 trained_model_on_showcase_data.py`  
    Motion mask as .mhd and .raw files will be located in : `results_showcase/`  
 
-## Case 2 : Use *our* trained model on *your* data (work in progress)
+## Case 2 : Use *our* trained model on *your* data
 
    Put your image sample (e.g., input_data.mhd or .nii) in the directory `data/`  
 
