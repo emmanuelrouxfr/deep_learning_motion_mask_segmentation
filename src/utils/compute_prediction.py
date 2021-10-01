@@ -18,7 +18,6 @@ def compute_prediction(model, slicing, image_tensor):
 
         if index_slice == 0:
             pred_array = predicted_slice.clone().detach()
-            print(pred_array.shape)
         else:
             pred_array = torch.cat((pred_array, predicted_slice), dim=axis_slicing[slicing])
     

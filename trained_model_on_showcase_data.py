@@ -31,7 +31,7 @@ def main(params):
     image_tensor = image_tensor.to(device=params.device)
 
     # Create empty volume to sum predictions
-    pred_sum = np.zeros((params.input_size))
+    pred_sum = torch.zeros((params.input_size)).to(params.device)
 
     # Load UNet models and predict volumes in each direction
     for slicing in tqdm(params.pre_trained_weights_path.keys(), total=3, desc="Direction prediction"):
@@ -44,10 +44,11 @@ def main(params):
         pred_sum += pred_array
 
     # Majority vote
-    prediction = np.where(pred_sum >= 2, 1, 0).astype(np.int16)
+    prediction = torch.where(pred_sum >= 2, 1, 0)
 
     # Saving of the prediction
-    prediction_image = sitk.GetImageFromArray(prediction.astype(np.int16))
+    prediction = prediction.detach().cpu().numpy().astype(np.int16)
+    prediction_image = sitk.GetImageFromArray(prediction)
     prediction_image.SetDirection(direction)
     prediction_image.SetOrigin(origin)
     prediction_image.SetSpacing(spacing)
@@ -58,7 +59,7 @@ if __name__ == '__main__':
 
     # Define parameters
     params = Munch()
-    params.device = "cpu"
+    params.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
     params.input_img_path = "./data/image_sample/50.0.mhd"
     params.input_size = [256, 256, 256]
     params.n_channels = 1
