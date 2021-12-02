@@ -2,7 +2,7 @@
 
 ![image from web](https://www.creatis.insa-lyon.fr/nextcloud/index.php/s/boGJjsP5tnFSWw2/preview)
 
-This repository is used to demonstrate the method published in Medical Physics : https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347
+This repository is used to demonstrate the method published in Medical Physics : https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347  
 Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Davila Serrano, Jean-Christophe Richard, Maciej Orkisz and David Sarrut.
 
 If you use this repository, please **cite the [associated publication](https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347)**.
@@ -85,7 +85,9 @@ For this use-case, we recommend pluggin in your code the model located in model.
 
 ## Acknowledments
 
-Thanks to the authors of this repository : https://github.com/milesial/Pytorch-UNet for providing an efficient implementation of U-net.  
+Thanks to the authors of this repository : https://github.com/milesial/Pytorch-UNet for providing an efficient implementation of UNet.  
+
+Thanks to the authors of this repository : https://github.com/UdonDa/3D-UNet-PyTorch/ for providing an efficient implementation of 3D-UNet.  
 
 This work was performed within the framework of the LABEX PRIMES (ANR-11-LABX-0063) of Université de Lyon, within the program "Investissements d'Avenir"(ANR-11-IDEX-0007) operated by the French National Research Agency (ANR).  
 
