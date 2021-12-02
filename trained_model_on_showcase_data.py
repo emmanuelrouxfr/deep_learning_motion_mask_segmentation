@@ -29,6 +29,9 @@ def main(params):
     image_tensor = torch.tensor(image_array).float()
     image_tensor = image_tensor.unsqueeze(axis=0).unsqueeze(axis=0)
     image_tensor = image_tensor.to(device=params.device)
+    params.input_size = list(image.GetSize())
+    params.input_size[0] = params.input_size[2]
+    params.input_size[2] = params.input_size[1]
 
     # Create empty volume to sum predictions
     pred_sum = torch.zeros((params.input_size)).to(params.device)
@@ -61,7 +64,6 @@ if __name__ == '__main__':
     params = Munch()
     params.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
     params.input_img_path = "./data/image_sample/50.0.mhd"
-    params.input_size = [256, 256, 256]
     params.n_channels = 1
     params.n_classes = 2
     params.pre_trained_weights_path = {
