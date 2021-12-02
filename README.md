@@ -10,7 +10,7 @@ If you use this repository, please **cite the [associated publication](https://a
 
 ## This repository has several usages :
 
- 1- Use our trained model on the data we provide, as a proof of concept.  
+ 1- Use our trained models on the data we provide, as a proof of concept : (a) multi-planar UNet and (b) 3D-UNet.
 
  2- Test our trained model on your data, to get the motion mask segmentations on your data.  
 
@@ -48,7 +48,6 @@ If you use this repository, please **cite the [associated publication](https://a
    Run :`python3 trained_model_on_showcase_data.py`  
    Motion mask as .mhd and .raw files will be located in : `results_showcase/trained_model_on_showcase_data`  
 
-## Case 1 (b) : Use *our* trained **3D** model on *our* showcase data
 
    Run :`python3 trained_3D_model_on_showcase_data.py`  
    Motion mask as .mhd and .raw files will be located in : `results_showcase/trained_3D_model_on_showcase_data`  
