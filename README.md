@@ -2,8 +2,10 @@
 
 ![image from web](https://www.creatis.insa-lyon.fr/nextcloud/index.php/s/boGJjsP5tnFSWw2/preview)
 
-This repository is used to demonstrate the method published in : http://link-to-paper.com  
+This repository is used to demonstrate the method published in Medical Physics : https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347
 Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Davila Serrano, Jean-Christophe Richard, Maciej Orkisz and David Sarrut.
+
+If you use this repository, please **cite the [associated publication](https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347)**.
 
 
 ## This repository has several usages :
@@ -41,10 +43,15 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 
 
 
-## Case 1 : Use *our* trained model on *our* showcase data
+## Case 1 (a) : Use *our* trained model on *our* showcase data
 
    Run :`python3 trained_model_on_showcase_data.py`  
-   Motion mask as .mhd and .raw files will be located in : `results_showcase/`  
+   Motion mask as .mhd and .raw files will be located in : `results_showcase/trained_model_on_showcase_data`  
+
+## Case 1 (b) : Use *our* trained **3D** model on *our* showcase data
+
+   Run :`python3 trained_3D_model_on_showcase_data.py`  
+   Motion mask as .mhd and .raw files will be located in : `results_showcase/trained_3D_model_on_showcase_data`  
 
 ## Case 2 : Use *our* trained model on *your* data
 
@@ -60,7 +67,6 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
 
    ```python
        params.input_img_path = "./data/PATH_OF_THE_IMAGE_TO_SEGMENT.mhd"
-       params.input_size = [256, 256, 256]
    ```  
 
    Finally run :
