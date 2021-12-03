@@ -4,7 +4,10 @@
 
 This repository is used to demonstrate the method published in Medical Physics : https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347  
 
-If you use this repository, please **cite** the [associated publication : **Improving motion-mask segmentation in thoracic CT with multiplanar U-nets](https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347)**.  
+If you use this repository, please **cite** the associated publication :  
+
+
+[**Improving motion-mask segmentation in thoracic CT with multiplanar U-nets**](https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.15347).  
 Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Davila Serrano, Jean-Christophe Richard, Maciej Orkisz and David Sarrut.
 
 ## This repository has several usages :
