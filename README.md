@@ -59,9 +59,10 @@ Authors : Ludmilla Penarrubia, Nicolas Pinon, Emmanuel Roux, Eduardo Enrique Dav
    Put your image sample (e.g., input_data.mhd or .nii) in the directory `data/`  
 
    (optional)
-   Run the following :
+   Run the following, line by line :
    ```bash
-   gatetools/bin/gt_affine_transform -i data/input_data.mhd -o data/output_data.mhd --newspacing "2.0" --force_resample --adaptative -p "-1000.0"  
+   gatetools/bin/gt_image_gauss -i data/input_data.mhd -o data/inter_data.mhd --sigma_mm "1.0"
+   gatetools/bin/gt_affine_transform -i data/inter_data.mhd -o data/output_data.mhd --force_resample --adaptive --newspacing "2.0" 
    ```  
 
    Edit the file `infer_motion_masks.py` (l. 62-63) with the path to your data and its size:
